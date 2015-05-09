@@ -1,10 +1,19 @@
 $(document).ready(function() {
     $(".evt-location-left").swipe( {
-        swipeLeft:function(event, direction, distance, duration, fingerCount, fingerData) {
-          $(this).css({transform: "translateX(-20%)"});
-          $(this).siblings(".evt-location-right").css({"right":"0"});
-          console.log(distance);
-        }
+        swipeStatus:function(event, phase, direction, distance, duration, fingers) {
+          //console.log(distance);
+          console.log(event.pageX);
+          if( distance >= 150 && phase == "end" ) {
+            $(this).css({transform: "translateX(-40%)"});
+            $(this).siblings(".evt-location-right").css({"right":"0"});
+          } else if ( distance < 150 && phase == "move" ) {
+            $(this).css({transform: "translateX(0)"});
+            $(this).siblings(".evt-location-right").css({"right":"-40%"});
+          }
+        },
+        threshold:200,
+        maxTimeThreshold:5000,
+        fingers:'all'
     });
 });
 

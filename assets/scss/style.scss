@@ -69,8 +69,8 @@ a {
 }
 .evt-location-left, .evt-location-right {
 	display: inline-block;
-	transition: 300ms;
-	-webkit-transition: 300ms;
+	transition: 200ms;
+	-webkit-transition: 200ms;
 }
 .evt-location-left {
 	width: 100%;
@@ -162,8 +162,10 @@ a {
       top: 0;
     }
   }
-  label[for="tab-past"] {
-  	left: 50%;
+  li:nth-child(2) {
+  	label {
+	  	left: 50%;
+	  }
   }
   [id^=tab]:checked + label {
     background-color: $secondary-color;
@@ -214,9 +216,6 @@ a {
 	section{
 		padding: 1rem 0;
 		overflow: hidden;
-		.pp-background {
-			padding: 0 0.8375rem;
-		}
 	}
 	.person-1 {
 		background: url("../img/han.straberg.png") top left no-repeat;
@@ -240,6 +239,65 @@ a {
 }
 .borderleft {
 	border-left: 4px solid #00e695;
+	padding: 0 0.875rem;
+	box-sizing: border-box;
+}
+/* PROFILE */
+.center {
+	text-align: center;
+}
+.info-1 {
+	padding-top: 5rem;
+	padding-bottom: 1rem;
+	background: url("../img/han.straberg.png") top left no-repeat;
+	background-size: cover;
+	border-bottom: 1px solid rgba(255,255,255,0.7);
+}
+.info-2 {
+	padding: 1rem 0;
+	border-bottom: 1px solid rgba(255,255,255,0.7);
+}
+.info-3 {
+	background: url("../img/portfolio.png") top left no-repeat;
+	background-size: cover;
+	padding: 3rem 0;
+	border-bottom: 1px solid rgba(255,255,255,0.7);
+}
+.info-4 {
+	padding: 3rem 0;
+	border-bottom: 1px solid rgba(255,255,255,0.7);
+	text-transform: uppercase;
+}
+.info-5 {
+	background: url("../img/portfolio.png") top left no-repeat;
+	background-size: cover;
+	padding: 3rem 0;
+	border-bottom: 1px solid rgba(255,255,255,0.7);
+}
+.m-icon-right {
+	&:after {
+		content: " ";
+		background-image: url('../img/ico_right-01.png');
+		background-size: 18px 25px;
+		background-repeat: no-repeat;
+		width: 18px;
+		height: 25px;
+		display: inline-block;
+		margin-left: 0.8rem;
+		top: 0.4rem;
+		position: relative;
+	}
+}
+/* MEETING CREATE */
+.meeting-create {
+	section{
+		padding: 1rem 0;
+		overflow: hidden;
+	}
+	.person-1 {
+		background: url("../img/han.straberg.png") top left no-repeat;
+		background-size: cover;
+	}
 }
 /* NAV */
 .nav {
