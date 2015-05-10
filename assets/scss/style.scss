@@ -288,6 +288,44 @@ a {
 		position: relative;
 	}
 }
+/* CONTACT */
+.contact {
+	section{
+		padding: 1rem 0;
+		overflow: hidden;
+		border-bottom: 1px solid rgba(255,255,255,0.7);
+	}
+	$repeat: 20;
+  @for $i from 1 through $repeat {
+    section:nth-child(#{length($border-left-colors)}n+#{$i}) .borderleft{
+        border-left: 4px solid lighten(nth($border-left-colors, random(length($border-left-colors))), 0%);
+    }
+	}
+	.person-1 {
+		background: url("../img/han.straberg.png") top left no-repeat;
+		background-size: cover;
+	}
+	.person-2 {
+		background: url("../img/rex.tibbens.png") top left no-repeat;
+		background-size: cover;
+	}
+	.person-3 {
+		background: url("../img/han.straberg.png") top left no-repeat;
+		background-size: cover;
+	}
+	.person-4 {
+		background: url("../img/han.straberg.png") top left no-repeat;
+		background-size: cover;
+	}
+	.person-5 {
+		background: url("../img/rex.tibbens.png") top left no-repeat;
+		background-size: cover;
+	}
+	.person-6 {
+		background: url("../img/han.straberg.png") top left no-repeat;
+		background-size: cover;
+	}
+}
 /* MEETING CREATE */
 .meeting-create {
 	section{
